@@ -1,0 +1,17 @@
+.loginbutton:hover {
+    background-repeat: no-repeat;
+    background-position: -225px 0;
+}
+
+.loginbutton {
+    display: block;
+    background-repeat: no-repeat;
+    width: 225px;
+    height: 66px;
+    text-decoration: none;
+    background: url("login_both.gif");
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    cursor: pointer;
+}
