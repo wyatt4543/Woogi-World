@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woogi World - Log in to WoogiWorld</title>
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <div class="loginstuff">
+        <form name="frm_login" id="frm_login" action="https://www.woogiworld.com/login/index.php" method="post" onsubmit="return validate();">
+            <table border="0" cellpadding="3" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="3" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="right" class="logintxt" width="150">WOOGI NAME:&nbsp;</td>
+                                        <td align="center"><input name="username" type="text" class="loginfield" onkeypress="return checkForEnter(event)" value=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" class="logintxt">PASSWORD:&nbsp;</td>
+                                        <td align="center"><input name="password" type="password" class="loginfield" onkeypress="return checkForEnter(event)" value=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td align="center" id="loginclip" height="66">
+                                            <div onclick="validate()" class="loginbutton"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <!--td align=center id=forgotclip height=36><a href="forgotpw.php?typ=woogi">Forgot Password</a></td-->
+                                        <td align="center">
+                                            <table border="0" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25"><img src="img/3.0/qmark_purple.gif"></td>
+                                                        <td>&nbsp;<a href="forgotpw.php?typ=woogi">Forgot Password</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td valign="top">
+                            <table border="0" cellpadding="3" cellspacing="0" width="150">
+                                <tbody>
+                                    <tr>
+                                        <td><input name="s" type="checkbox" value="54545"></td>
+                                        <td class="loginhelps">Slow Computer</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top"><input name="remember" id="remember" type="checkbox" value="Y"></td>
+                                        <td class="loginhelps">Remember me on this computer</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
