@@ -11,6 +11,13 @@ body {
     font-family: arial, helvetica, sans-serif;
 }
 
+.loginstuff {
+    position: absolute;
+    left: 50%;
+    margin-left: -270px;
+    z-index: 99;
+}
+
 input.loginfield {
     border: 3px solid #FF4D5B;
     width: 220px;
