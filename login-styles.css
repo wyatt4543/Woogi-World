@@ -1,3 +1,16 @@
+body {
+    background-color: #CFEA94;
+    background-image: url('img/3.0/headbg.gif');
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0;
+    font-family: arial, helvetica, sans-serif;
+}
+
 .loginbutton:hover {
     background-repeat: no-repeat;
     background-position: -225px 0;
