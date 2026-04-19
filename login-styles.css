@@ -11,6 +11,11 @@ body {
     font-family: arial, helvetica, sans-serif;
 }
 
+.logintxt {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
 .loginbutton:hover {
     background-repeat: no-repeat;
     background-position: -225px 0;
