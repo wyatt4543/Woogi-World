@@ -11,6 +11,20 @@ body {
     font-family: arial, helvetica, sans-serif;
 }
 
+.wrapper2 {
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 50;
+}
+
+.wrapper3 {
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 3;
+}
+
 .loginstuff {
     position: absolute;
     left: 50%;
