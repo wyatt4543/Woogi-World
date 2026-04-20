@@ -20,8 +20,34 @@ body {
 }
 
 .tabbut0:hover {
-      background-repeat: no-repeat;
-      background-position: -110px 0;
+    background-repeat: no-repeat;
+    background-position: -110px 0;
+}
+
+.tabbut1 {
+    display: block;
+    width: 171px;
+    height: 53px;
+    text-decoration: none;
+    background: url("../img/3.0/tabicon1.gif");
+}
+
+.tabbut1:hover {
+    background-repeat: no-repeat;
+    background-position: -171px 0;
+}
+
+.tabbut2 {
+    display: block;
+    width: 198px;
+    height: 53px;
+    text-decoration: none;
+    background: url("../img/3.0/tabicon2.gif");
+}
+
+.tabbut2:hover {
+    background-repeat: no-repeat;
+    background-position: -198px 0;
 }
 
 .wrapper2 {
