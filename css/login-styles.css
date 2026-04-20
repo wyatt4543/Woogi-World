@@ -19,6 +19,11 @@ body {
     background: url("../img/3.0/tabicon0.gif");
 }
 
+.tabbut0:hover {
+      background-repeat: no-repeat;
+      background-position: -110px 0;
+}
+
 .wrapper2 {
     position: relative;
     margin: 0 auto;
