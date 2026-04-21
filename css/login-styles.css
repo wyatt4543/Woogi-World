@@ -133,6 +133,11 @@ input.loginfield {
     cursor: pointer;
 }
 
+.createbutton:hover {
+    background-repeat: no-repeat;
+    background-position: -420px 0;
+}
+
 .foot {
     background-image: url('../img/3.0/footbg.gif');
     background-repeat: no-repeat;
