@@ -66,6 +66,7 @@ body {
 
 .loginstuff {
     position: absolute;
+    top: -385px;
     left: 50%;
     margin-left: -270px;
     z-index: 99;
@@ -105,6 +106,23 @@ input.loginfield {
     background-position-x: 0%;
     background-position-y: 0%;
     background-repeat: repeat;
+    cursor: pointer;
+}
+
+.createbut {
+    position: absolute;
+    top: -175px;
+    left: 50%;
+    margin-left: -210px;
+    z-index: 99;
+}
+
+.createbutton {
+    display: block;
+    width: 420px;
+    height: 150px;
+    text-decoration: none;
+    background: url("../img/3.0/create_both.gif");
     cursor: pointer;
 }
 
