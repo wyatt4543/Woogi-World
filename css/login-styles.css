@@ -86,13 +86,21 @@ body {
 }
 
 input.loginfield {
-    border: 3px solid #FF4D5B;
     width: 220px;
     height: 30px;
     padding: 2px;
     font-size: 12pt;
     font-weight: bold;
     background-color: #ffffff;
+}
+
+.loginfield {
+    border: 3px solid #FF4D5B;
+    width: 220px;
+    height: 30px;
+    padding: 2px;
+    font-size: 12pt;
+    font-weight: bold;
 }
 
 .logintxt {
