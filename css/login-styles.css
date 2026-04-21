@@ -122,6 +122,12 @@ input.loginfield {
     cursor: pointer;
 }
 
+.homeflash {
+    position: relative;
+    top: -6px;
+    left: 0px;
+}
+
 .createbut {
     position: absolute;
     top: -175px;
