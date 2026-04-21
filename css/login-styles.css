@@ -50,6 +50,13 @@ body {
     background-position: -198px 0;
 }
 
+.pointer0 {
+    position: relative;
+    top: 53px;
+    left: -515px;
+    z-index: 2;
+}
+
 .wrapper2 {
     position: relative;
     margin: 0 auto;
