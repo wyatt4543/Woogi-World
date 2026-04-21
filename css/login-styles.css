@@ -107,3 +107,10 @@ input.loginfield {
     background-repeat: repeat;
     cursor: pointer;
 }
+
+.foot {
+    background-image: url('../img/3.0/footbg.gif');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 45px;
+}
