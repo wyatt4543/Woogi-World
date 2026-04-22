@@ -203,5 +203,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "username: $username";
     echo "password: $password";
+
+    session_start();
+    $_SESSION['username'] = $_POST['username'];
+    header("Location: ../go.php");
+    exit();
 }
 ?>
