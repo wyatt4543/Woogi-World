@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "password: $password";
 
     session_start();
-    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['username'] = $username;
     header("Location: ../go.php");
     exit();
 }
