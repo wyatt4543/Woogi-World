@@ -1,3 +1,19 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // use the collected user data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    echo "username: $username";
+    echo "password: $password";
+
+    session_start();
+    $_SESSION['username'] = $_POST['username'];
+    header("Location: ../go.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -194,19 +210,3 @@
     </table>
 </body>
 </html>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // use the collected user data
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    echo "username: $username";
-    echo "password: $password";
-
-    session_start();
-    $_SESSION['username'] = $_POST['username'];
-    header("Location: ../go.php");
-    exit();
-}
-?>
