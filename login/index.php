@@ -1,3 +1,14 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // use the collected user data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    echo "username: $username";
+    echo "password: $password";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
