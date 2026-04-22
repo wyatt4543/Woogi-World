@@ -18,7 +18,7 @@
                                 <td width="36"></td>
                                 <td valign="middle" width="308">
                                     <a href="https://web.archive.org/web/20131018235543/http://www.woogiworld.com/">
-                                        <img border="0" src="img/3.0/headlogo.gif">
+                                        <img border="0" src="../img/3.0/headlogo.gif">
                                     </a>
                                 </td>
                                 <td align="right">
@@ -26,21 +26,21 @@
                                         <table border="0" cellpadding="0" cellspacing="6" align="right">
                                             <tbody>
                                                 <tr>
-                                                    <td valign="middle" align="center" width="140" height="85" background="img/3.0/tabbg0.gif">
+                                                    <td valign="middle" align="center" width="140" height="85" background="../img/3.0/tabbg0.gif">
                                                         <a class="tabbut0" href="https://web.archive.org/web/20131018235543/http://www.woogiworld.com/">
                                                         </a>
                                                     </td>
-                                                    <td valign="middle" align="center" width="193" height="85" background="img/3.0/tabbg1.gif">
+                                                    <td valign="middle" align="center" width="193" height="85" background="../img/3.0/tabbg1.gif">
                                                         <a class="tabbut1" href="https://web.archive.org/web/20131018235543/http://www.woogiworld.com/parents/">
                                                         </a>
                                                     </td>
-                                                    <td valign="middle" align="center" width="219" height="85" background="img/3.0/tabbg2.gif">
+                                                    <td valign="middle" align="center" width="219" height="85" background="../img/3.0/tabbg2.gif">
                                                         <a class="tabbut2" href="https://web.archive.org/web/20131018235543/http://www.woogiworld.com/educators/">
                                                         </a>
                                                     </td>
                                                     <td width="1">
                                                         <div class="pointer0">
-                                                            <img src="img/3.0/pointer.gif">
+                                                            <img src="../img/3.0/pointer.gif">
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -97,7 +97,7 @@
                                                                 <table border="0" cellpadding="0" cellspacing="0">
                                                                     <tbody>
                                                                         <tr>
-                                                                            <td width="25"><img src="img/3.0/qmark_purple.gif"></td>
+                                                                            <td width="25"><img src="../img/3.0/qmark_purple.gif"></td>
                                                                             <td>&nbsp;<a href="forgotpw.php?typ=woogi">Forgot Password</a></td>
                                                                         </tr>
                                                                     </tbody>
@@ -155,7 +155,7 @@
                                                                         <tr>
                                                                             <td width="83">
                                                                                 <a href="https://web.archive.org/web/20131018235543/http://www.kidsafeseal.com/certifiedproducts/woogiworld.html" target="_blank">
-                                                                                    <img border="0" alt="WoogiWorld.com is certified by the kidSAFE Seal Program." title="WoogiWorld.com is certified by the kidSAFE Seal Program." src="img/3.0/woogiworld_large_darktm.png" width="80" height="30">
+                                                                                    <img border="0" alt="WoogiWorld.com is certified by the kidSAFE Seal Program." title="WoogiWorld.com is certified by the kidSAFE Seal Program." src="../img/3.0/woogiworld_large_darktm.png" width="80" height="30">
                                                                                 </a>
                                                                             </td>
                                                                             <td valign="middle">
