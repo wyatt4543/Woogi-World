@@ -16,7 +16,7 @@ var myGameArea = {
             let x = event.offsetX;
             let y = event.offsetY;
 
-            player.newPos(x, y);
+            player.updateGoal(x, y);
         });
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
@@ -45,9 +45,11 @@ function component(width, height, color, x, y, type) {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
-    this.newPos = function (newX, newY) {
+    this.updateGoal = function (newX, newY) {
         this.goalX = newX;
         this.goalY = newY;
+    }
+    this.newPos = function () {
         this.x = this.goalX - (this.width / 2);
         this.y = this.goalY - (this.height / 2);
     }
