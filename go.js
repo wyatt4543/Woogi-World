@@ -1,7 +1,7 @@
-var myGamePiece;
+var player;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    player = new component(30, 30, "red", 10, 120);
     myGameArea.start();
 }
 
@@ -16,7 +16,7 @@ var myGameArea = {
             let x = event.offsetX;
             let y = event.offsetY;
 
-            myGamePiece.newPos(x, y);
+            player.newPos(x, y);
         });
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
@@ -54,7 +54,7 @@ function component(width, height, color, x, y, type) {
 function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    myGamePiece.update();
+    player.update();
 }
 
 function everyinterval(n) {
