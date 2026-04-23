@@ -54,7 +54,9 @@ function component(width, height, color, x, y, type) {
         if (this.x !== this.goalX - (this.width / 2)) {
             this.x += Math.sign(this.goalX - this.x) * this.playerSpeed;
         }
-        this.y = this.goalY - (this.height / 2);
+        if (this.y !== this.goalY - (this.height / 2)) {
+            this.y += Math.sign(this.goalY - this.y) * this.playerSpeed;
+        }
     }
 }
 
