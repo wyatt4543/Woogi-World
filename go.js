@@ -34,7 +34,7 @@ function component(width, height, color, x, y, type) {
     this.y = y;
     this.goalX = this.x;
     this.goalY = this.y;
-    this.playerSpeed = 2;
+    this.playerSpeed = 1;
     this.update = function () {
         ctx = myGameArea.context;
         if (this.type == "text") {
@@ -49,12 +49,14 @@ function component(width, height, color, x, y, type) {
     this.updateGoal = function (newX, newY) {
         this.goalX = newX;
         this.goalY = newY;
+        console.log("X sign: " + Math.sign(this.goalX - this.x));
+        console.log("Y sign: " + Math.sign(this.goalY - this.y));
     }
     this.newPos = function () {
-        if (this.x !== this.goalX - (this.width / 2)) {
+        if (this.x !== this.goalX - (Math.sign(this.goalX - this.x) * (this.width / 2))) {
             this.x += Math.sign(this.goalX - this.x) * this.playerSpeed;
         }
-        if (this.y !== this.goalY - (this.height / 2)) {
+        if (this.y !== this.goalY - (Math.sign(this.goalY - this.y) * (this.height / 2))) {
             this.y += Math.sign(this.goalY - this.y) * this.playerSpeed;
         }
     }
