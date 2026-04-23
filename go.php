@@ -12,5 +12,6 @@ echo "username: {$_SESSION['username']}";
     <title>Woogi World - Play</title>
 </head>
 <body>
+    <script type="text/javascript" async="" src="go.js"></script>
 </body>
 </html>
