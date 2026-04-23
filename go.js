@@ -44,8 +44,8 @@ function component(width, height, color, x, y, type) {
         }
     }
     this.newPos = function (x, y) {
-        this.x = x;
-        this.y = y;
+        this.x = x - (this.width / 2);
+        this.y = y - (this.height / 2);
     }
 }
 
