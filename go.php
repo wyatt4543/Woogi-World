@@ -1,8 +1,3 @@
-<?php
-echo "username: {$_COOKIE['username']}";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
