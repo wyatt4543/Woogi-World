@@ -2,7 +2,7 @@ var player;
 
 function startGame() {
     player = new component(30, 30, "red", 210, 105);
-    usernameDisplay = new component("12px", "Arial", "#2596be", 210, 150, "text");
+    usernameDisplay = new component("12px", "Arial", "#0000BC", 210, 150, "text");
     myGameArea.start();
 }
 
