@@ -50,7 +50,9 @@ function component(width, height, color, x, y, type) {
         this.goalY = newY;
     }
     this.newPos = function () {
-        this.x = this.goalX - (this.width / 2);
+        if (this.x !== this.goalX - (this.width / 2)) {
+            this.x += Math.sign(this.goalX - this.x);
+        }
         this.y = this.goalY - (this.height / 2);
     }
 }
