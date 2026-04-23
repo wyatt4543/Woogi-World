@@ -32,6 +32,8 @@ function component(width, height, color, x, y, type) {
     this.height = height;
     this.x = x;
     this.y = y;
+    this.goalX = 0;
+    this.goalY = 0;
     this.update = function () {
         ctx = myGameArea.context;
         if (this.type == "text") {
