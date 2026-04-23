@@ -2,6 +2,7 @@ var player;
 
 function startGame() {
     player = new component(30, 30, "red", 210, 105);
+    usernameDisplay = new component("12px", "Arial", "#2596be", 210, 150, "text");
     myGameArea.start();
 }
 
@@ -18,6 +19,7 @@ var myGameArea = {
 
             player.updateGoal(x, y);
         });
+        usernameDisplay.text = "example name";
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
     },
@@ -65,6 +67,7 @@ function component(width, height, color, x, y, type) {
 function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
+    usernameDisplay.update();
     player.newPos();
     player.update();
 }
