@@ -1,4 +1,6 @@
 var player;
+let cookie = document.cookie;
+alert(cookie);
 
 function startGame() {
     player = new component(30, 30, "red", 210, 105);
