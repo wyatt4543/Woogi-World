@@ -18,7 +18,6 @@ function getCookie(cname) {
 }
 
 let username = getCookie("username");
-alert(username);
 
 function startGame() {
     player = new component(30, 30, "red", 210, 105);
@@ -39,7 +38,7 @@ var myGameArea = {
 
             player.updateGoal(x, y);
         });
-        usernameDisplay.text = "example name";
+        usernameDisplay.text = username;
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
     },
