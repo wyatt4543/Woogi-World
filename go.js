@@ -58,6 +58,7 @@ function component(width, height, color, x, y, type) {
 function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
+    player.newPos();
     player.update();
 }
 
