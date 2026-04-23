@@ -32,8 +32,8 @@ function component(width, height, color, x, y, type) {
     this.height = height;
     this.x = x;
     this.y = y;
-    this.goalX = 0;
-    this.goalY = 0;
+    this.goalX = this.x;
+    this.goalY = this.y;
     this.update = function () {
         ctx = myGameArea.context;
         if (this.type == "text") {
@@ -45,9 +45,11 @@ function component(width, height, color, x, y, type) {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
-    this.newPos = function (x, y) {
-        this.x = x - (this.width / 2);
-        this.y = y - (this.height / 2);
+    this.newPos = function (newX, newY) {
+        this.goalX = newX;
+        this.goalY = newY;
+        this.x = this.goalX - (this.width / 2);
+        this.y = this.goalY - (this.height / 2);
     }
 }
 
