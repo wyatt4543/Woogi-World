@@ -18,7 +18,6 @@ echo "username: {$_SESSION['username']}";
     </style>
 </head>
 <body onload="startGame()">
-    <input type="hidden" value="$SESSION_['username']" class="username">
     <script type="text/javascript" async="" src="go.js"></script>
 </body>
 </html>
