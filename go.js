@@ -1,7 +1,7 @@
 var player;
 
 function startGame() {
-    player = new component(30, 30, "red", 10, 120);
+    player = new component(30, 30, "red", 210, 105);
     myGameArea.start();
 }
 
@@ -53,10 +53,10 @@ function component(width, height, color, x, y, type) {
         console.log("Y sign: " + Math.sign(this.goalY - this.y));
     }
     this.newPos = function () {
-        if (this.x !== this.goalX - (Math.sign(this.goalX - this.x) * (this.width / 2))) {
+        if (this.x !== this.goalX) {
             this.x += Math.sign(this.goalX - this.x) * this.playerSpeed;
         }
-        if (this.y !== this.goalY - (Math.sign(this.goalY - this.y) * (this.height / 2))) {
+        if (this.y !== this.goalY) {
             this.y += Math.sign(this.goalY - this.y) * this.playerSpeed;
         }
     }
