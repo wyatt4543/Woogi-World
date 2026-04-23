@@ -1,6 +1,24 @@
 var player;
-let cookie = document.cookie;
-alert(cookie);
+
+//helper function for getting cookies
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+let username = getCookie("username");
+alert(username);
 
 function startGame() {
     player = new component(30, 30, "red", 210, 105);

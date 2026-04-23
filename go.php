@@ -1,7 +1,5 @@
 <?php
-session_start();
-echo "username: {$_SESSION['username']}";
-setcookie("username", $_SESSION['username'], time() + (86400 * 30), "/", "", false, false);
+echo "username: {$_COOKIE['username']}";
 ?>
 
 

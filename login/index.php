@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // use the collected user data
     $username = $_POST['username'];
@@ -9,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "username: $username";
     echo "password: $password";
 
-    $_SESSION['username'] = $username;
+    setcookie("username", $username, time() + (86400 * 30), "/", "", false, false);
     header("Location: ../go.php");
     exit();
 }
