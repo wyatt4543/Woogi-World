@@ -70,8 +70,6 @@ function component(width, height, color, x, y, type) {
     this.updateGoal = function (newX, newY) {
         this.goalX = newX;
         this.goalY = newY;
-        console.log("X sign: " + Math.sign(this.goalX - this.x));
-        console.log("Y sign: " + Math.sign(this.goalY - this.y));
     }
     this.movePlayer = function () {
         const dx = this.goalX - this.x;
