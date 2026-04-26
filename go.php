@@ -13,5 +13,10 @@
 </head>
 <body onload="startGame()">
     <script type="text/javascript" async="" src="go.js"></script>
+    <div id="messageContainer">
+        <input type="text" id="messageBox" name="messageBox">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="chatbox"></div>
 </body>
 </html>

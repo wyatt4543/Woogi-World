@@ -2,6 +2,8 @@ var player;
 var isMoving = false;
 var background = new Image();
 background.src = "img/3.0/game/home_background.png";
+let messageBox = document.getElementById("messageBox");
+let chatbox = document.getElementById("chatbox");
 
 //helper function for getting cookies
 function getCookie(cname) {
@@ -107,4 +109,12 @@ function updateGameArea() {
         usernameDisplay.updateUsernamePos();
     }
     player.update();
+}
+
+function sendMessage() {
+    let messageText = messageBox.value;
+
+    const message = document.createElement("p");
+    message.textContent = messageText;
+    chatbox.appendChild(message);
 }
