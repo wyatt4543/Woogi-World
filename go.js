@@ -73,7 +73,7 @@ function component(width, height, color, x, y, type) {
         console.log("X sign: " + Math.sign(this.goalX - this.x));
         console.log("Y sign: " + Math.sign(this.goalY - this.y));
     }
-    this.newPos = function () {
+    this.movePlayer = function () {
         if (this.x !== this.goalX) {
             this.x += Math.sign(this.goalX - this.x) * this.playerSpeed;
         }
@@ -87,7 +87,7 @@ function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
     usernameDisplay.update();
-    player.newPos();
+    player.movePlayer();
     player.update();
 }
 
