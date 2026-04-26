@@ -96,8 +96,3 @@ function updateGameArea() {
     player.movePlayer();
     player.update();
 }
-
-function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) { return true; }
-    return false;
-}
