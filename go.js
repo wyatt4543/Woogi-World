@@ -118,6 +118,7 @@ function updateGameArea() {
     }
     player.update();
     chatBubble.update();
+    chatText.update();
 }
 
 function sendMessage() {
