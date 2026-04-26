@@ -36,7 +36,7 @@ var myGameArea = {
             let x = event.offsetX;
             let y = event.offsetY;
 
-            player.updateGoal(x, y);
+            player.updateGoal(x - (player.width / 2), y - (player.height / 2));
         });
         usernameDisplay.text = username;
         this.frameNo = 0;
