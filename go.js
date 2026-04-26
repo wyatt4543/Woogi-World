@@ -29,8 +29,8 @@ function startGame() {
 var myGameArea = {
     canvas: document.createElement("canvas"),
     start: function () {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 780;
+        this.canvas.height = 580;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.canvas.addEventListener("click", function(event) {
