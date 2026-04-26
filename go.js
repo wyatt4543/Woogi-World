@@ -88,6 +88,10 @@ function component(width, height, color, x, y, type) {
             this.y = this.goalY;
         }
     }
+    this.updateUsernamePos = function () {
+        usernameDisplay.x = player.x;
+        usernameDisplay.y = player.y + 45;
+    }
 }
 
 function updateGameArea() {
@@ -96,6 +100,7 @@ function updateGameArea() {
     usernameDisplay.update();
     if (isMoving === true) {
         player.movePlayer();
+        usernameDisplay.updateUsernamePos();
     }
     player.update();
 }
