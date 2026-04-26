@@ -55,7 +55,7 @@ function component(width, height, color, x, y, type) {
     this.y = y;
     this.goalX = this.x;
     this.goalY = this.y;
-    this.playerSpeed = 1;
+    this.playerSpeed = 2;
     this.update = function () {
         ctx = myGameArea.context;
         if (this.type == "text") {
@@ -78,9 +78,9 @@ function component(width, height, color, x, y, type) {
         const dy = this.goalY - this.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance > speed) {
-            this.x += (dx / distance) * speed;
-            this.y += (dy / distance) * speed;
+        if (distance > playerSpeed) {
+            this.x += (dx / distance) * playerSpeed;
+            this.y += (dy / distance) * playerSpeed;
         }
         else {
             this.x = this.goalX;
