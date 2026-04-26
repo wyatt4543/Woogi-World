@@ -22,7 +22,7 @@ let username = getCookie("username");
 
 function startGame() {
     player = new component(30, 30, "red", 210, 105);
-    usernameDisplay = new component("12px", "monospace", "#0000BC", 210, 150, "text");
+    usernameDisplay = new component("12px", "monospace", "#0000BC", player.x + (player.width / 2), 150, "text");
     myGameArea.start();
 }
 
@@ -63,6 +63,7 @@ function component(width, height, color, x, y, type) {
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
+            ctx.textAlign = "center";
             ctx.fillText(this.text, this.x, this.y);
         } else {
             ctx.fillStyle = color;
@@ -89,7 +90,7 @@ function component(width, height, color, x, y, type) {
         }
     }
     this.updateUsernamePos = function () {
-        usernameDisplay.x = player.x;
+        usernameDisplay.x = player.x + (player.width / 2);
         usernameDisplay.y = player.y + 45;
     }
 }
