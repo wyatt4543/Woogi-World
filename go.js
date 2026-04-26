@@ -46,6 +46,7 @@ var myGameArea = {
             player.updateGoal(x - (player.width / 2), y - (player.height / 2));
             isMoving = true;
         });
+        chatText.text = "";
         usernameDisplay.text = username;
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 16.66);
