@@ -28,6 +28,7 @@ function startGame() {
     player = new component(30, 30, "red", 405, 305);
     usernameDisplay = new component("12px", "monospace", "#0000BC", player.x + (player.width / 2), player.y + 45, "text");
     chatBubble = new component(97, 46, "img/3.0/game/chat_bubble.png", 372, 255, "image")
+    chatText = new component("12px", "monospace", "#000000", chatBubble.x, chatBubble.y, "text");
     myGameArea.start();
 }
 
@@ -124,5 +125,6 @@ function sendMessage() {
 
     const message = document.createElement("p");
     message.textContent = messageText;
+    chatText.text = messageText;
     chatbox.appendChild(message);
 }
