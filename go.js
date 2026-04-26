@@ -25,8 +25,8 @@ function getCookie(cname) {
 let username = getCookie("username");
 
 function startGame() {
-    player = new component(30, 30, "red", 210, 105);
-    usernameDisplay = new component("12px", "monospace", "#0000BC", player.x + (player.width / 2), 150, "text");
+    player = new component(30, 30, "red", 405, 305);
+    usernameDisplay = new component("12px", "monospace", "#0000BC", player.x + (player.width / 2), player.y, "text");
     myGameArea.start();
 }
 
