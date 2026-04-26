@@ -78,9 +78,9 @@ function component(width, height, color, x, y, type) {
         const dy = this.goalY - this.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance > playerSpeed) {
-            this.x += (dx / distance) * playerSpeed;
-            this.y += (dy / distance) * playerSpeed;
+        if (distance > this.playerSpeed) {
+            this.x += (dx / distance) * this.playerSpeed;
+            this.y += (dy / distance) * this.playerSpeed;
         }
         else {
             this.x = this.goalX;
