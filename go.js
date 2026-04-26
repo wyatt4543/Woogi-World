@@ -1,4 +1,5 @@
 var player;
+var isMoving = false;
 
 //helper function for getting cookies
 function getCookie(cname) {
@@ -37,10 +38,11 @@ var myGameArea = {
             let y = event.offsetY;
 
             player.updateGoal(x - (player.width / 2), y - (player.height / 2));
+            isMoving = true;
         });
         usernameDisplay.text = username;
         this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
+        this.interval = setInterval(updateGameArea, 16.66);
     },
     clear: function () {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -81,6 +83,7 @@ function component(width, height, color, x, y, type) {
             this.y += (dy / distance) * this.playerSpeed;
         }
         else {
+            isMoving = false;
             this.x = this.goalX;
             this.y = this.goalY;
         }
@@ -91,6 +94,8 @@ function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
     usernameDisplay.update();
-    player.movePlayer();
+    if (isMoving === true) {
+        player.movePlayer();
+    }
     player.update();
 }
