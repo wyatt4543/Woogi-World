@@ -74,11 +74,17 @@ function component(width, height, color, x, y, type) {
         console.log("Y sign: " + Math.sign(this.goalY - this.y));
     }
     this.movePlayer = function () {
-        if (this.x !== this.goalX) {
-            this.x += Math.sign(this.goalX - this.x) * this.playerSpeed;
+        const dx = this.goalX - this.x;
+        const dy = this.goalY - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance > speed) {
+            this.x += (dx / distance) * speed;
+            this.y += (dy / distance) * speed;
         }
-        if (this.y !== this.goalY) {
-            this.y += Math.sign(this.goalY - this.y) * this.playerSpeed;
+        else {
+            this.x = this.goalX;
+            this.y = this.goalY;
         }
     }
 }
