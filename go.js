@@ -105,7 +105,7 @@ function component(width, height, color, x, y, type, parent) {
         this.y = newY;
     }
     this.childUpdatePosition = function (addX, addY) {
-        this.updatePosition((parent.x + (parent.width / 2)) + addX, parent.y + addY);
+        this.updatePosition((parent.x + (parent.width / 2)) + addX, (parent.y + (parent.width / 2)) + addY);
     }
 }
 
@@ -115,7 +115,7 @@ function updateGameArea() {
     usernameDisplay.update();
     if (isMoving === true) {
         player.movePlayer();
-        usernameDisplay.childUpdatePosition(0, 45);
+        usernameDisplay.childUpdatePosition(0, 30);
     }
     player.update();
     chatBubble.update();
