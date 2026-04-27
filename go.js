@@ -114,6 +114,8 @@ function component(width, height, color, x, y, type, parent) {
     }
     this.updateImage = function (newImage) {
         this.image.src = newImage;
+        this.width = this.image.naturalWidth;
+        this.height = this.image.naturalHeight;
     }
 }
 
