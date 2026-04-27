@@ -112,12 +112,12 @@ function component(width, height, color, x, y, type, parent) {
 function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    usernameDisplay.update();
     if (isMoving === true) {
         player.movePlayer();
         usernameDisplay.childUpdatePosition(0, 30);
     }
     player.update();
+    usernameDisplay.update();
     chatBubble.update();
     chatText.update();
 }
