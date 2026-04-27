@@ -98,8 +98,7 @@ function component(width, height, color, x, y, type) {
         }
         else {
             isMoving = false;
-            this.x = this.goalX;
-            this.y = this.goalY;
+            updatePosition(this.goalX, this.goalY);
         }
     }
     this.updatePosition = function (newX, newY) {
