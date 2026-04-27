@@ -115,6 +115,8 @@ function updateGameArea() {
     if (isMoving === true) {
         player.movePlayer();
         usernameDisplay.childUpdatePosition(0, 30);
+        chatBubble.childUpdatePosition(-48, -65);
+        chatText.childUpdatePosition(0, -5);
     }
     player.update();
     usernameDisplay.update();
