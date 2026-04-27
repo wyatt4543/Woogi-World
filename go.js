@@ -1,10 +1,12 @@
 var player;
 var isMoving = false;
+var showChatBubble = false;
 var background = new Image();
 background.src = "img/3.0/game/home_background.png";
 let messageBox = document.getElementById("messageBox");
 let chatbox = document.getElementById("chatbox");
 
+//HELPER FUNCTIONS
 //helper function for getting cookies
 function getCookie(cname) {
     let name = cname + "=";
@@ -23,6 +25,9 @@ function getCookie(cname) {
 }
 
 let username = getCookie("username");
+
+//helper function for waiting
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 function startGame() {
     player = new component(30, 30, "red", 405, 305);
@@ -120,8 +125,10 @@ function updateGameArea() {
     }
     player.update();
     usernameDisplay.update();
-    chatBubble.update();
-    chatText.update();
+    if (showChatBubble === true) {
+        chatBubble.update();
+        chatText.update();
+    }
 }
 
 function sendMessage() {
@@ -131,4 +138,13 @@ function sendMessage() {
     message.textContent = messageText;
     chatText.text = messageText;
     chatbox.appendChild(message);
+}
+
+function chatTimeOut() {
+    // allow the chat message to show
+    showChatBubble = true;
+
+    // hide the chat message after 3 seconds
+    await sleep(3000);
+    showChatBubble = false;
 }
