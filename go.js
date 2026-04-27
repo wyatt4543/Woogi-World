@@ -26,7 +26,7 @@ let username = getCookie("username");
 
 function startGame() {
     player = new component(30, 30, "red", 405, 305);
-    usernameDisplay = new component("12px", "monospace", "#0000BC", player.x + (player.width / 2), player.y + 45, "text");
+    usernameDisplay = new component("12px", "monospace", "#0000BC", player.x + (player.width / 2), player.y + 45, "text", player);
     chatBubble = new component(97, 46, "img/3.0/game/chat_bubble.png", 372, 255, "image")
     chatText = new component("12px", "monospace", "#000000", chatBubble.x + (chatBubble.width / 2), chatBubble.y + 18, "text");
     myGameArea.start();
@@ -56,7 +56,7 @@ var myGameArea = {
     }
 }
 
-function component(width, height, color, x, y, type) {
+function component(width, height, color, x, y, type, parent) {
     this.type = type;
     if (type == "image") {
         this.image = new Image();
@@ -104,6 +104,9 @@ function component(width, height, color, x, y, type) {
         this.x = newX;
         this.y = newY;
     }
+    this.childUpdatePosition = function (addX, addY) {
+        this.updatePosition((parent.x + (parent.width / 2)) + addX, parent.y + addY);
+    }
 }
 
 function updateGameArea() {
@@ -112,7 +115,7 @@ function updateGameArea() {
     usernameDisplay.update();
     if (isMoving === true) {
         player.movePlayer();
-        usernameDisplay.updatePosition(player.x + (player.width / 2), player.y + 45);
+        usernameDisplay.childUpdatePosition(0, 45);
     }
     player.update();
     chatBubble.update();
