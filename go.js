@@ -140,7 +140,7 @@ function sendMessage() {
     chatbox.appendChild(message);
 }
 
-function chatTimeOut() {
+async function chatTimeOut() {
     // allow the chat message to show
     showChatBubble = true;
 
