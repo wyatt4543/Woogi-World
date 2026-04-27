@@ -93,8 +93,7 @@ function component(width, height, color, x, y, type) {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance > this.playerSpeed) {
-            this.x += (dx / distance) * this.playerSpeed;
-            this.y += (dy / distance) * this.playerSpeed;
+            this.updatePosition(this.x + (dx / distance) * this.playerSpeed, this.y + (dy / distance) * this.playerSpeed)
         }
         else {
             isMoving = false;
