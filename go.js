@@ -102,9 +102,9 @@ function component(width, height, color, x, y, type) {
             this.y = this.goalY;
         }
     }
-    this.updateUsernamePos = function () {
-        usernameDisplay.x = player.x + (player.width / 2);
-        usernameDisplay.y = player.y + 45;
+    this.updatePosition = function (newX, newY) {
+        this.x = newX;
+        this.y = newY;
     }
 }
 
@@ -114,7 +114,7 @@ function updateGameArea() {
     usernameDisplay.update();
     if (isMoving === true) {
         player.movePlayer();
-        usernameDisplay.updateUsernamePos();
+        usernameDisplay.updatePosition(player.x + (player.width / 2), player.y + 45);
     }
     player.update();
     chatBubble.update();
