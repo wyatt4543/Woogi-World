@@ -112,6 +112,9 @@ function component(width, height, color, x, y, type, parent) {
     this.childUpdatePosition = function (addX, addY) {
         this.updatePosition((parent.x + (parent.width / 2)) + addX, (parent.y + (parent.height / 2)) + addY);
     }
+    this.updateImage = function (newImage) {
+        this.image.src = newImage;
+    }
 }
 
 function updateGameArea() {
