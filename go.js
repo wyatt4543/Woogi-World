@@ -136,6 +136,11 @@ function updateGameArea() {
 
 function sendMessage() {
     let messageText = messageBox.value;
+    if (messageText.length <= 13) {
+        chatBubble.updateImage("img/3.0/game/small_chat_bubble.png");
+    } else {
+        chatBubble.updateImage("img/3.0/game/medium_chat_bubble.png");
+    }
 
     const message = document.createElement("p");
     message.textContent = messageText;
