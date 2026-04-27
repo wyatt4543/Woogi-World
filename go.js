@@ -150,3 +150,10 @@ async function chatTimeOut() {
     await sleep(3000);
     showChatBubble = false;
 }
+
+// check for if the user hit the enter key for the chatBox
+function checkForEnter(e) {
+    if (e.keyCode === 13) {
+        return sendMessage();
+    }
+}
