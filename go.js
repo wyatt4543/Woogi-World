@@ -28,7 +28,7 @@ function startGame() {
     player = new component(30, 30, "red", 405, 305);
     usernameDisplay = new component("12px", "monospace", "#0000BC", player.x + (player.width / 2), (player.y + (player.height / 2)) + 30, "text", player);
     chatBubble = new component(97, 46, "img/3.0/game/chat_bubble.png", (player.x + (player.width / 2)) - 48, (player.y + (player.height / 2)) - 65, "image", player)
-    chatText = new component("12px", "monospace", "#000000", chatBubble.x + (chatBubble.width / 2), (chatBubble.y + (chatBubble.height / 2)) - 5, "text");
+    chatText = new component("12px", "monospace", "#000000", chatBubble.x + (chatBubble.width / 2), (chatBubble.y + (chatBubble.height / 2)) - 5, "text", chatBubble);
     myGameArea.start();
 }
 
