@@ -138,6 +138,7 @@ function sendMessage() {
     message.textContent = messageText;
     chatText.text = messageText;
     chatbox.appendChild(message);
+    chatTimeOut();
 }
 
 async function chatTimeOut() {
